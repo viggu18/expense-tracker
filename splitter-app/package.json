@@ -22,7 +22,7 @@
     "@types/hammerjs": "^2.0.46",
     "axios": "^1.13.2",
     "babel-preset-expo": "^13.2.4",
-    "expo": "~54.0.0",
+    "expo": "~54.0.30",
     "expo-contacts": "^15.0.10",
     "expo-status-bar": "~2.1.0",
     "hermes-parser": "^0.33.1",
