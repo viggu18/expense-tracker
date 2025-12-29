@@ -25,7 +25,7 @@
     "expo": "~54.0.0",
     "expo-contacts": "^15.0.10",
     "expo-status-bar": "~2.1.0",
-    "hermes-parser": "^0.20.1",
+    "hermes-parser": "^0.33.1",
     "metro": "^0.80.9",
     "metro-config": "^0.80.9",
     "metro-core": "^0.80.9",
