@@ -28,7 +28,7 @@
     "hermes-parser": "^0.33.1",
     "metro": "^0.83.3",
     "metro-config": "^0.80.9",
-    "metro-core": "^0.80.9",
+    "metro-core": "^0.83.3",
     "react": "19.2.3",
     "react-hook-form": "^7.66.0",
     "react-native": "0.78.0",
