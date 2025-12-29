@@ -14,7 +14,7 @@
     "@react-native-community/datetimepicker": "7.7.0",
     "@react-native-community/slider": "4.5.2",
     "@react-native/babel-preset": "^0.78.0",
-    "@react-navigation/bottom-tabs": "^6.6.1",
+    "@react-navigation/bottom-tabs": "^7.9.0",
     "@react-navigation/drawer": "^6.6.3",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.11.0",
