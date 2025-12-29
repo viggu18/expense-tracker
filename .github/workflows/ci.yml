@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Install backend dependencies
+      run: |
+        cd splitter-backend
+        npm ci
+
+    - name: Install frontend dependencies
+      run: |
+        cd splitter-app
+        npm ci
+
+    - name: Run backend tests
+      run: |
+        cd splitter-backend
+        npm test
+
+    - name: Run frontend tests
+      run: |
+        cd splitter-app
+        npm test
+
+    - name: Build backend
+      run: |
+        cd splitter-backend
+        npm run build
+
+    - name: Build frontend
+      run: |
+        cd splitter-app
+        npm run build

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Splitter Support
+    url: https://splitter.app/support
+    about: Contact our support team for help with using Splitter
+  - name: Splitter Documentation
+    url: https://docs.splitter.app
+    about: Check our documentation for help with using Splitter
+  - name: Splitter Community Forum
+    url: https://community.splitter.app
+    about: Ask questions and discuss Splitter with other users

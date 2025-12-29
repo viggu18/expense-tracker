@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "splitter",
+    "slug": "splitter",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.splitter.app",
+      "infoPlist": {
+        "NSContactsUsageDescription": "This app needs access to contacts to suggest friends for groups."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.splitter.app",
+      "permissions": [
+        "READ_CONTACTS"
+      ]
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}

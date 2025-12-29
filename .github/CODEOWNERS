@@ -1,0 +1,16 @@
+# Code Owners
+
+# Global owners
+* @splitter-team
+
+# Backend owners
+splitter-backend/ @splitter-backend-team
+
+# Frontend owners
+splitter-app/ @splitter-frontend-team
+
+# Documentation owners
+*.md @splitter-docs-team
+
+# CI/CD owners
+.github/workflows/ @splitter-devops-team

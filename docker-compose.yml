@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # MongoDB database
+  mongodb:
+    image: mongo:5.0
+    container_name: splitter-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  # Backend API
+  backend:
+    build: ./splitter-backend
+    container_name: splitter-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGODB_URI=mongodb://root:example@mongodb:27017/splitter?authSource=admin
+      - JWT_SECRET=splitter_jwt_secret_key
+    depends_on:
+      - mongodb
+    volumes:
+      - ./splitter-backend:/app
+      - /app/node_modules
+
+  # Frontend app
+  frontend:
+    build: ./splitter-app
+    container_name: splitter-frontend
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+    environment:
+      - REACT_NATIVE_PACKAGER_HOSTNAME=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./splitter-app:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+volumes:
+  mongodb_data:
